@@ -1,0 +1,13 @@
+Setup:
+git init --bare ~/dotfiles.git
+alias .G="git --work-tree=$HOME/ --git-dir=$HOME/dotfiles.git"
+
+Distro:
+git clone --bare git://github.com/psym/dotfiles.git ~/dotfiles.git
+alias .G="git --git-dir=$HOME/dotfiles.git --work-tree=$HOME/"
+# commit original files in orig branch for backup
+# WARNING: backup what's going to be overwritten
+.G status -s -uno   # review changelist
+.G checkout -b original_files 
+.G commit -a  -m 'original files'
+.G checkout master

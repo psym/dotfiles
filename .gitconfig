@@ -1,0 +1,5 @@
+[core]
+    excudesfile = ~/.gitignore-global
+[user]
+	name = psym
+	email = psymoot@gmail.com
