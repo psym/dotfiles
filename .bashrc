@@ -127,7 +127,7 @@ grabssh() {
                                     s/$/"/
                                     s/^/export /'
     done 1>$HOME/bin/fixssh
-    chmod 600 $HOME/bin/fixssh
+    chmod 700 $HOME/bin/fixssh
 }
 
 grabssh
