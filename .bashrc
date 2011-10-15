@@ -104,6 +104,7 @@ fi
 
 stty -ixon
 
+export EDITOR=vim
 
 #auto-screen
 #if [ "$PS1" != "" -a "${STARTED_SCREEN:-x}" = x -a " ${SSH_TTY:-x}" != x ]
@@ -120,6 +121,7 @@ grabssh() {
     # persistent store - intended to be refreshed each time you login
     SSHVARS="SSH_CLIENT SSH_TTY SSH_AUTH_SOCK SSH_CONNECTION"
 
+    mkdir $HOME/bin
     for x in ${SSHVARS} ; do
         (eval echo $x=\$$x) | sed  's/=/="/
                                     s/$/"/
