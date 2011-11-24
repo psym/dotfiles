@@ -132,4 +132,4 @@ grabssh() {
 
 grabssh
 
-
+export PATH="$HOME/bin:$PATH"
