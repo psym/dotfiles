@@ -26,7 +26,8 @@ fi
 # create a new session, named $SESSION, and detach from it
 tmux new-session -d -s $SESSION
 
-tmux new-window -t $SESSION -a -n root  'sudo su -'
+# root shell in window 0
+tmux new-window -t $SESSION:0 -k -n root  'sudo su -'
 tmux new-window -t $SESSION -a  
 
 # all done. select starting window and get to work
