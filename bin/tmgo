@@ -28,6 +28,8 @@ tmux new-session -d -s $SESSION
 
 # root shell in window 0
 tmux new-window -t $SESSION:0 -k -n root  'sudo su -'
+tmux set-window-option -t $SESSION:0 automatic-rename on
+
 tmux new-window -t $SESSION -a  
 
 # all done. select starting window and get to work
