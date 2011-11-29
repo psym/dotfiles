@@ -101,6 +101,7 @@ alias .G="git --work-tree=$HOME/ --git-dir=$HOME/dotfiles.git"
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+source ~/bin/bash_completion_tmux.sh
 
 stty -ixon
 
